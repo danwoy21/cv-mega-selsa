@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mega Selsa Nabilla | CV Interaktif</title>
+<meta name="description" content="Mahasiswa UBSI Tasikmalaya: administrasi, media sosial, desain visual, dan pengolahan data.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff7fa; --card:#ffffff; --pink:#ff8fb1; --pink-soft:#ffe3ec; --rose:#d93f78;
+  --ink:#4a2c3a; --muted:#8d6b7b; --line:#ffd0df;
+  --head:'Fredoka','Trebuchet MS',sans-serif; --body:'Nunito','Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:12px}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.2}
+section{max-width:960px;margin:0 auto;padding:72px 20px 8px}
+h2{font-size:clamp(1.7rem,4vw,2.2rem);margin-bottom:28px;display:flex;align-items:center;gap:12px}
+h2 .ic{font-size:1.9rem}
+
+/* floating background */
+#bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+#bg span{position:absolute;bottom:-40px;opacity:.5;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(40deg)}}
+main,nav,footer{position:relative;z-index:1}
+
+/* nav */
+nav{position:sticky;top:10px;z-index:20;display:flex;justify-content:center;padding:0 10px}
+.pill{display:flex;gap:4px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border:2px solid var(--line);border-radius:999px;padding:6px;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.pill a{text-decoration:none;font-weight:700;font-size:.9rem;padding:7px 14px;border-radius:999px;white-space:nowrap;transition:.2s}
+.pill a:hover,.pill a.on{background:var(--pink);color:#fff}
+
+/* hero */
+.hero{text-align:center;padding-top:56px}
+.avatar{position:relative;width:190px;height:190px;margin:0 auto 26px}
+.avatar .face{position:absolute;inset:14px;border-radius:50%;background:linear-gradient(145deg,#ffc2d6,#ff8fb1);display:grid;place-items:center;font-family:var(--head);font-size:3.6rem;color:#fff;border:6px solid #fff;box-shadow:0 10px 30px rgba(255,143,177,.45);cursor:pointer;overflow:hidden;transition:transform .3s}
+.avatar .face img{width:100%;height:100%;object-fit:cover}
+.avatar .face:hover{transform:scale(1.06) rotate(-4deg)}
+.orbit{position:absolute;inset:0;animation:spin 14s linear infinite}
+.orbit i{position:absolute;font-style:normal;font-size:1.7rem;animation:spin 14s linear infinite reverse}
+.orbit i:nth-child(1){top:-6px;left:50%;margin-left:-14px}
+.orbit i:nth-child(2){bottom:10px;right:-4px}
+.orbit i:nth-child(3){bottom:10px;left:-4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(2.2rem,7vw,3.8rem);color:var(--rose);letter-spacing:.5px}
+.role{font-size:1.2rem;min-height:2em;margin-top:6px;color:var(--muted);font-weight:700}
+.role b{color:var(--rose)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--rose);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.contact{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:2px solid var(--pink);background:#fff;color:var(--rose);font:700 .95rem var(--body);text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--pink);color:#fff;transform:translateY(-3px)}
+.btn.fill{background:var(--pink);color:#fff}
+.btn.fill:hover{background:var(--rose);border-color:var(--rose)}
+.btn .e{display:inline-block}
+.btn:hover .e{animation:wiggle .5s}
+
+/* cards */
+.card{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:22px 24px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(255,143,177,.25)}
+.about p{font-size:1.08rem;max-width:68ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:var(--pink-soft);color:var(--rose);font-weight:700;font-size:.88rem;padding:5px 13px;border-radius:999px}
+
+/* timeline */
+.tl{position:relative;padding-left:34px;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;border-left:3px dashed var(--pink)}
+.tl .card{position:relative}
+.tl .card::before{content:"";position:absolute;left:-31px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--pink);border:3px solid #fff;box-shadow:0 0 0 2px var(--pink)}
+.tl h3{font-size:1.2rem;display:flex;align-items:center;gap:10px}
+.tl .when{color:var(--rose);font-weight:700;font-size:.9rem}
+.tl .sub{color:var(--muted)}
+
+/* organisasi */
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.feat{display:flex;gap:14px;align-items:flex-start}
+.feat .ic{font-size:2rem;flex:none}
+.orgs{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.org{background:var(--pink);color:#fff;font-family:var(--head);font-size:1.05rem;padding:10px 20px;border-radius:999px;cursor:pointer;border:0;transition:.2s}
+.org:hover{background:var(--rose);transform:scale(1.07) rotate(-2deg)}
+
+/* karya */
+.work{display:flex;gap:16px;align-items:flex-start;margin-bottom:16px}
+.work .ic{font-size:2.4rem;flex:none}
+.work h3{font-size:1.08rem;margin-bottom:6px}
+.work p{color:var(--muted)}
+
+/* skills */
+.tabs{display:inline-flex;background:var(--pink-soft);border-radius:999px;padding:5px;margin-bottom:22px}
+.tab{border:0;background:transparent;font:700 .95rem var(--body);color:var(--rose);padding:9px 20px;border-radius:999px;cursor:pointer;transition:.2s}
+.tab[aria-selected=true]{background:var(--pink);color:#fff}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.skill{text-align:left;font:inherit;color:inherit;cursor:pointer}
+.skill .ic{font-size:2.1rem;display:inline-block;margin-bottom:6px}
+.skill h3{font-size:1.02rem;margin-bottom:4px}
+.skill p{font-size:.9rem;color:var(--muted);line-height:1.5}
+.skill.soft{text-align:center}
+.skill.soft p{display:none}
+
+/* icon animations */
+.a-float{animation:float 3s ease-in-out infinite}
+.a-bounce{animation:bounce 1.6s ease-in-out infinite}
+.a-wiggle{animation:wiggle 2.2s ease-in-out infinite}
+.a-spin{animation:spin 6s linear infinite}
+.a-pulse{animation:pulse 1.8s ease-in-out infinite}
+.a-swing{animation:swing 2.4s ease-in-out infinite;transform-origin:top center}
+.a-tada{animation:tada 2.6s ease-in-out infinite}
+.card:hover .ic{animation-duration:.6s}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-12px)}60%{transform:translateY(0)}80%{transform:translateY(-5px)}}
+@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+@keyframes pulse{50%{transform:scale(1.2)}}
+@keyframes swing{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(12deg)}}
+@keyframes tada{0%,60%,100%{transform:scale(1) rotate(0)}10%,20%{transform:scale(.9) rotate(-5deg)}30%,50%{transform:scale(1.2) rotate(5deg)}40%{transform:scale(1.2) rotate(-5deg)}}
+
+/* reveal & misc */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+footer{text-align:center;padding:70px 20px 40px;color:var(--muted)}
+footer .big{font-size:2.4rem;display:block;margin-bottom:6px}
+.spark{position:fixed;pointer-events:none;z-index:99;font-size:1.2rem;animation:pop .9s ease-out forwards}
+@keyframes pop{to{transform:translate(var(--x),var(--y)) scale(.3) rotate(160deg);opacity:0}}
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,90px);background:var(--rose);color:#fff;font-weight:700;padding:11px 22px;border-radius:999px;z-index:100;transition:transform .35s}
+#toast.show{transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}#bg{display:none}
+}
+</style>
+</head>
+<body>
+<div id="bg" aria-hidden="true"></div>
+
+<nav><div class="pill" id="menu">
+  <a href="#home">Beranda</a><a href="#profil">Profil</a><a href="#pendidikan">Pendidikan</a>
+  <a href="#organisasi">Organisasi</a><a href="#karya">Karya</a><a href="#skills">Skill</a><a href="#kontak">Kontak</a>
+</div></nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="avatar">
+    <div class="orbit"><i>🌸</i><i>💖</i><i>✨</i></div>
+    <!-- Mau pakai foto sendiri? Ganti isi .face dengan: <img src="foto.jpg" alt="Foto Mega"> -->
+    <div class="face" id="face" title="Klik aku!" role="button" tabindex="0" aria-label="Klik untuk hujan hati">
+    <img src="foto.jpg" alt="Foto Mega">
+</div>
+  </div>
+  <h1>Mega Selsa Nabilla</h1>
+  <p class="role">Aku seorang <b id="typed"></b><span class="caret"></span></p>
+  <div class="contact">
+    <a class="btn fill" href="https://wa.me/62895402441555" target="_blank" rel="noopener"><span class="e">💬</span>WhatsApp</a>
+    <button class="btn" id="copyMail" type="button"><span class="e">💌</span>Salin email</button>
+    <a class="btn" href="#kontak"><span class="e">📍</span>Tasikmalaya, Jawa Barat</a>
+  </div>
+</section>
+
+<section id="profil" class="rv about">
+  <h2><span class="ic a-float">🌷</span>Profil</h2>
+  <div class="card">
+    <p>Mahasiswa UBSI Kota Tasikmalaya yang memiliki kemampuan dalam administrasi, pengelolaan media sosial, desain visual, dan pengolahan data. Terbiasa membuat dokumen dan laporan, menyiapkan konten publikasi, serta bekerja sama dalam kegiatan organisasi dan pengabdian kepada masyarakat. Memiliki kemampuan komunikasi, public speaking, manajemen waktu, dan adaptasi yang baik.</p>
+    <div class="chips"><span class="chip">Administrasi</span><span class="chip">Media sosial</span><span class="chip">Desain visual</span><span class="chip">Pengolahan data</span></div>
+  </div>
+</section>
+
+<section id="pendidikan" class="rv">
+  <h2><span class="ic a-bounce">🎓</span>Pendidikan</h2>
+  <div class="tl">
+    <div class="card">
+      <h3><span class="ic a-swing">🏫</span>UBSI Kota Tasikmalaya</h3>
+      <div class="when">2024 – Sekarang</div>
+      <div class="sub">Program Studi Sistem Informasi</div> <!-- Isi program studimu di sini -->
+    </div>
+    <div class="card">
+      <h3><span class="ic a-wiggle">🔬</span>MAN 1 Kota Tasikmalaya</h3>
+      <div class="when">2021 – 2024</div>
+      <div class="sub">Ilmu Pengetahuan Alam</div>
+    </div>
+  </div>
+</section>
+
+<section id="organisasi" class="rv">
+  <h2><span class="ic a-tada">🎀</span>Pengalaman organisasi dan kepanitiaan</h2>
+  <div class="grid2">
+    <div class="card feat"><span class="ic a-pulse">👑</span><p>Terbiasa memimpin kelompok dalam kegiatan kelas maupun organisasi.</p></div>
+    <div class="card feat"><span class="ic a-wiggle">🎤</span><p>Berpengalaman menjadi MC dalam berbagai acara.</p></div>
+    <div class="card feat"><span class="ic a-float">📝</span><p>Sering dipercaya sebagai sekretaris acara, dengan tanggung jawab mencatat, menyusun laporan, dan mengelola administrasi.</p></div>
+    <div class="card feat"><span class="ic a-swing">⏰</span><p>Disiplin dalam mengatur waktu antara kegiatan akademik dan organisasi.</p></div>
+  </div>
+  <div class="orgs" aria-label="Organisasi">
+    <button class="org" type="button">🏛️ BEM UBSI Tasikmalaya</button>
+    <button class="org" type="button">🎈 PAGER ASIK</button>
+  </div>
+</section>
+
+<section id="karya" class="rv">
+  <h2><span class="ic a-float">📚</span>Pengabdian masyarakat dan karya tulis</h2>
+  <div class="card work">
+    <span class="ic a-spin">🌐</span>
+    <div><h3>Implementasi Website Explore Santanamekar sebagai Strategi Promosi Potensi Wisata Desa</h3><p>Kontributor kegiatan pengabdian masyarakat dan penyusunan karya tulis/jurnal.</p></div>
+  </div>
+  <div class="card work">
+    <span class="ic a-bounce">🛍️</span>
+    <div><h3>Peningkatan Penjualan UMKM melalui Pelatihan Digital Marketing Praktis di Desa Kaputihan, Kecamatan Jatiwaras, Kabupaten Tasikmalaya</h3><p>Kontributor kegiatan pengabdian masyarakat dan penyusunan karya tulis/jurnal.</p></div>
+  </div>
+</section>
+
+<section id="skills" class="rv">
+  <h2><span class="ic a-tada">⭐</span>Skill</h2>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="hard">Hard skills</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="soft">Soft skills</button>
+  </div>
+  <div class="skills" id="skillGrid"></div>
+</section>
+</main>
+
+<footer id="kontak">
+  <span class="big a-float" style="display:inline-block">💖</span>
+  <p><b>Yuk ngobrol!</b></p>
+  <p>0895402441555 · megaselsanabilla@gmail.com</p>
+  <div class="contact">
+    <a class="btn fill" href="https://wa.me/62895402441555" target="_blank" rel="noopener"><span class="e">💬</span>Chat WhatsApp</a>
+    <a class="btn" href="mailto:megaselsanabilla@gmail.com"><span class="e">✉️</span>Kirim email</a>
+  </div>
+  <p style="margin-top:26px;font-size:.9rem">© 2026 Mega Selsa Nabilla</p>
+</footer>
+<div id="toast" role="status"></div>
+
+<script>
+/* ===== Data skill (edit di sini) ===== */
+const SKILLS = {
+  hard: [
+    ["📱","a-float","Social Media Management","Pengelolaan akun media sosial dan kebutuhan publikasi konten."],
+    ["🗓️","a-swing","Content Planning","Perencanaan ide dan jadwal konten media sosial."],
+    ["🗂️","a-bounce","Administrasi","Pengelolaan dokumen, pencatatan, pengarsipan, dan penyusunan laporan."],
+    ["⌨️","a-pulse","Data Entry & Data Processing","Input, pengelolaan, dan penyusunan data menggunakan spreadsheet."],
+    ["🗄️","a-wiggle","MySQL","Pengelolaan basis data dan penggunaan query SQL dasar."],
+    ["💻","a-float","Visual Studio Code","Editor kode untuk penulisan dan pengelolaan proyek pemrograman."],
+    ["📊","a-bounce","Microsoft Excel","Rumus dasar, pengelolaan spreadsheet, dan pembuatan grafik."],
+    ["📄","a-swing","Microsoft Word","Pembuatan dan pemformatan dokumen, laporan, serta proposal."],
+    ["🎨","a-tada","Desain Grafis","Pembuatan desain visual untuk kebutuhan konten dan publikasi."],
+    ["🎬","a-pulse","CapCut","Pengeditan video, penambahan efek, transisi, teks, dan audio."]
+  ],
+  soft: [
+    ["🎤","a-wiggle","Komunikasi efektif dan public speaking",""],
+    ["⏰","a-swing","Manajemen waktu",""],
+    ["🤝","a-bounce","Kerja sama tim dan kepemimpinan",""],
+    ["🧩","a-float","Pemecahan masalah",""],
+    ["🔍","a-pulse","Ketelitian dan tanggung jawab",""]
+  ]
+};
+const grid = document.getElementById('skillGrid');
+function renderSkills(t){
+  grid.innerHTML = SKILLS[t].map(s =>
+    `<button class="card skill ${t}" type="button"><span class="ic ${s[1]}">${s[0]}</span><h3>${s[2]}</h3><p>${s[3]}</p></button>`).join('');
+}
+document.querySelectorAll('.tab').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.setAttribute('aria-selected', x === b));
+  renderSkills(b.dataset.t);
+});
+renderSkills('hard');
+
+/* ===== Teks mengetik ===== */
+const roles = ["pengelola media sosial","admin yang rapi","desainer konten","pengolah data","MC & public speaker","mahasiswa UBSI"];
+const typed = document.getElementById('typed');
+let ri = 0, ci = 0, del = false;
+(function type(){
+  const w = roles[ri];
+  typed.textContent = w.slice(0, ci);
+  if(!del && ci === w.length){ del = true; return setTimeout(type, 1400); }
+  if(del && ci === 0){ del = false; ri = (ri + 1) % roles.length; }
+  ci += del ? -1 : 1;
+  setTimeout(type, del ? 35 : 80);
+})();
+
+/* ===== Hati & bunga melayang di latar ===== */
+const bg = document.getElementById('bg');
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+  const em = ["💗","🌸","✨","🎀","🌷","💕"];
+  for(let i = 0; i < 16; i++){
+    const s = document.createElement('span');
+    s.textContent = em[i % em.length];
+    s.style.left = Math.random() * 100 + '%';
+    s.style.fontSize = 14 + Math.random() * 18 + 'px';
+    s.style.animationDuration = 14 + Math.random() * 16 + 's';
+    s.style.animationDelay = -Math.random() * 25 + 's';
+    bg.appendChild(s);
+  }
+}
+
+/* ===== Percikan saat klik ===== */
+function burst(x, y, set = ["💖","✨","🌸","💗","🎀"], n = 9){
+  for(let i = 0; i < n; i++){
+    const s = document.createElement('span');
+    s.className = 'spark';
+    s.textContent = set[Math.floor(Math.random() * set.length)];
+    s.style.left = x + 'px'; s.style.top = y + 'px';
+    const a = Math.random() * Math.PI * 2, d = 40 + Math.random() * 70;
+    s.style.setProperty('--x', Math.cos(a) * d + 'px');
+    s.style.setProperty('--y', Math.sin(a) * d + 'px');
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 900);
+  }
+}
+document.addEventListener('click', e => burst(e.clientX, e.clientY, undefined, 6));
+const face = document.getElementById('face');
+function rain(){ for(let i = 0; i < 14; i++) setTimeout(() => burst(Math.random() * innerWidth, Math.random() * innerHeight * .5, ["💖","💗","🌸"], 2), i * 60); }
+face.onclick = e => { e.stopPropagation(); rain(); };
+face.onkeydown = e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); rain(); } };
+document.querySelectorAll('.org').forEach(b => b.addEventListener('click', e => burst(e.clientX, e.clientY, ["🎉","✨","🎈","💖"], 10)));
+
+/* ===== Salin email + toast ===== */
+const toast = document.getElementById('toast');
+function say(t){ toast.textContent = t; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2200); }
+document.getElementById('copyMail').onclick = () => {
+  const m = 'megaselsanabilla@gmail.com';
+  (navigator.clipboard ? navigator.clipboard.writeText(m) : Promise.reject())
+    .then(() => say('Email tersalin 💌'), () => say(m));
+};
+
+/* ===== Muncul saat scroll + menu aktif ===== */
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+const links = [...document.querySelectorAll('#menu a')];
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+}), {rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id], footer[id]').forEach(s => spy.observe(s));
+</script>
+</body>
+</html>
